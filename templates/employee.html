@@ -1,0 +1,31 @@
+{% if user.is_authenticated %}
+    <li><a class="nav-link scrollto" href="logout">Logout</a></li>
+    <h1>Welcome <span>{{user.username}}</span></h1>
+    <h2>Counter number: {{counter}}</h2>
+    <br>
+    <h2>Customer name: {{name}}</span></h2>
+    <h2>Token number: {{token}}</span></h2>
+    <br>
+
+    <form method = "POST" action = "employee">
+        {% csrf_token %}
+    <button name = "next" type="submit" class="float">Next Customer</button>
+    </form>
+    <button ><a class="float" href="selectCounter">Select Counter</a></button >
+
+{% else %} <!-- wouldn't work anymore, handled this in backend, basically don't need it-->
+    <li><a class="nav-link scrollto" href="login">Login</a></li>
+    <h1>This is the employee login page</h1>
+
+{% endif %}
+
+{% for message in messages %}
+    <h3 style="color: red;">{{message}}</h3>
+{% endfor %}
+
+<!--below is a javascript code, it solved the problem of resubmission whenever the page was reloaded which worked as a 'next customer' button-->
+<script>
+    if ( window.history.replaceState ) {
+      window.history.replaceState( null, null, window.location.href );
+    }
+</script>

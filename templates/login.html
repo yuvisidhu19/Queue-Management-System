@@ -1,0 +1,29 @@
+{% if user.is_authenticated %}
+  <li><a class="nav-link scrollto" href="logout">Logout</a></li>
+  <h2>Hello {{user.username}}, You are already logged in</h2>
+  <h2>Go to <a class="nav-link scrollto" href="employee">Employee page</a></h2>
+
+{% else %}
+  <div class="login">
+    <div class="heading">
+      <h2>Log in</h2>
+
+      {% for message in messages %}
+      <h2>{{message}}</h2>
+      {% endfor %}
+
+      <form method = "POST" action = "login">
+        {% csrf_token %}
+
+          <input type="text" class="form-control" placeholder="Username" name = "username">
+            </div>
+
+            <input type="password" class="form-control" placeholder="Password" name = "password">
+          </div>
+          <br>
+          <button type="submit" class="float">Login</button>
+        </form>
+          </div>
+  </div>
+
+{% endif %}

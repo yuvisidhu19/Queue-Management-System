@@ -1,0 +1,28 @@
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 	<!--Link to Bootsrap style-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<title>Dashboard</title>
+</head>
+
+<form method = "POST" action = "selectCounter">
+    {% csrf_token %}
+<body style="font-family: Arial, Helvetica, sans-serif; background-color: #e8b5ba">
+  <span style="text-align: center;">
+  <h1 style="color: #9c3116;">Select Counter</h1>
+  {% if availableCounters|length > 0 %}
+    <select name="counter">
+    {% for counter in availableCounters %}
+      <option value = {{counter}} style="text-align: center;">{{counter}}</option>
+    {% endfor %}
+    </select>
+    <button type="submit" class="float" >Submit</button>
+  {% else %}
+    <h2>No available counter</h2>
+  {% endif %}
+  </span>
+</form>
+</body>
+</html>

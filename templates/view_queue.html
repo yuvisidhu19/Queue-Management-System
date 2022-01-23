@@ -1,0 +1,31 @@
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 	<!--Link to Bootsrap style-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<title>Dashboard</title>
+</head>
+
+<form method="GET">
+<body style="font-family: Arial, Helvetica, sans-serif; background-color: #e8b5ba">
+	<h2 style="margin-left: 15px; margin-top: 30px; color: #9c3116">Token Number</h2>
+  <input type="text" id="lname" name="token" style="margin-left: 15px; text-align: center; color: #30ab22; font-size: 72px ; width:360px;">
+
+  {% for message in messages %}
+  <h6 style="margin-left: 15px; color: red;">{{message}}</h6>
+  {% endfor %}
+</form>
+
+  <br><br>
+  <h1 style="color: #9c3116; text-align: center;">Counter</h1>
+  <span style="text-align: center; margin-left: 25%;">
+  <button class="btn-lg btn-success" style="padding: 50px 100px 50px 100px;">{{counter_num}}</button>
+  </span>
+  <br><br>
+  <span style="text-align: center;">
+  	<h4 style="color: #9c3116;">Position in Queue : </h4>
+  	<h1 style="color: #9c3116;">{{pos}}</h1>
+  </span>
+</body>
+</html>
