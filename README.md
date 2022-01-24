@@ -11,6 +11,17 @@ be sent to their mobile number as SMS and their email address. Following
 registration, the user will be sent to a webpage where they can check their position and counter number from token number. 
 The user will also be notified through SMS and email when its their turn.
 
+# Dynamic queue allocation
+This algorithm works whenever the 'next customer' button is clicked by any employee which rearranges the queue accordingly. 
+Consider there are 2 counters, one counter attended people faster than the other. Now, 1st counter has 2 people and 2nd counter has 6 people in it.
+Hence, we can transfer 2 people from 2nd counter to 1st counter to balance it out. But the question is which 2 out of those 6 people.
+If we take the last 2, it would be easier to implement but unfair to the ones who came before them. 
+
+So, the algorithm will work in the following way:
+
+The 4th and 5th person of 2nd queue will be assigned 3rd and 4th position of 1st counter and the 6th person of counter 2 will naturally get the 4th position of counter 2.
+            
+
 # Customer side
 The software is able to perform the following operations:
 1. **Register user**: The software is able to register user by asking their name, phone number
