@@ -16,6 +16,7 @@ The software is able to perform the following operations:
 1. Register user: The software is able to register user by asking their name, phone number
 and email address. The user will receive an OTP on their phone via SMS and email.
 OTP can minimize the risk of fraudulent login attempts. Only one phone number can be registered at a time. 
+
 Note: Twilio API is used to send SMS and smtplib module is used to send emails. I have left the variables for both as a blank string at top in views.py file. You need to fill those details if you want to use them. I have also commented the codes in the same file at lines 90-104, 142-156, 290-304. If you want to use the SMS or email privileges, you need to fill details at line 10-19 and uncomment those lines. You might also need to lower the security of your email account for it to work. Compiling twilio and smtplib codes in a seperate file is suggested before moving on to views.py file.
 
 2. Provide token number: It provides the customer with a unique token number that distinguishes
@@ -24,10 +25,12 @@ one record from all others. The token number starts with one and increments by o
 3. Assign counter: It can assign user a counter with the smallest queue,
 given there are more than one counter present at the location.
 
+Note: The assigned counter number might change later as the queue is dynamic. More explaination in the #employee side.
+
 4. Check queue status: The software provides a way for user to check their assigned counter number and position in queue.
 
 5. Notify turn: The software is able to notify the user when it’s their turn to reach
-the assigned counter.
+the assigned counter through SMS and email.
 
 Screenshots
 Index page: User can access main page by scanning the QR code assigned to the hosted website.
