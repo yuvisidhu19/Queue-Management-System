@@ -135,4 +135,4 @@ Example of customer data:
 
 P.S.: Admin has a lot of other permissions too but it is advised not to use them to avoid any errors in QMS. For eg, deleting a customer's data, changing employee's counter number, etc.
 
-Note: You need to input secret key in the settings.py file.
+Note: You are required to input secret key in the settings.py file.
