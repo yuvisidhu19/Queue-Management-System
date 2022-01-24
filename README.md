@@ -32,6 +32,7 @@ the assigned counter through SMS and email.
 ## Screenshots
 
 **Index page**: User can access main page by scanning the QR code assigned to the hosted website.
+
 ![index](https://user-images.githubusercontent.com/67970877/150690882-bc540f4e-52d0-409a-9577-6f45d40e7f88.PNG)
 
 **Registration page**: This page will only submit if there are no blank columns, the email is of valid format and the phone number is not already registered and is of 10 digit (after +91).
@@ -47,9 +48,11 @@ the assigned counter through SMS and email.
 ![view queue](https://user-images.githubusercontent.com/67970877/150691132-efbd614e-c5bb-434d-84e8-0d8a3088e7f4.PNG)
 
 **SMS** (using Twilio)
+
 ![phone](https://user-images.githubusercontent.com/67970877/150690633-843b34e0-3b34-4ddc-85f9-00b943c64704.jpeg)
 
 **Email** (using smtplib)
+
 ![email](https://user-images.githubusercontent.com/67970877/150690637-2958e310-cf39-4c65-aaf5-0cfe07c8f316.PNG)
 
 P.S.: Frontend for customer side isn't done by me.
@@ -97,19 +100,23 @@ When the 'next customer' button is clicked, the positions of all the people in t
 
 ![admin](https://user-images.githubusercontent.com/67970877/150790593-529322f5-3f7e-414a-80f6-149f00c49747.PNG)
 
+
 Employees can be added by admin by clicking on the 'add user' button in the users section as specified by the arrow below.
 
 ![admin2](https://user-images.githubusercontent.com/67970877/150790607-4969ebb8-9835-4356-83d5-27a64f26f149.PNG)
+
 
 The admin can change the total number of counters that can be selected by employees by going to the employees section and selecting the name of the admin (can be anything) as specified below. The admin mustn't tamper with any other option.
 
 ![admin3](https://user-images.githubusercontent.com/67970877/150790632-9a12289d-ee98-4ccd-822b-0cb88c4d5b0c.PNG)
 
+
 As mentioned before, the column of CounterNumber for admin works as total number of counters.
 
 ![ADMIN4](https://user-images.githubusercontent.com/67970877/150790645-7c5a886f-4feb-4082-ae6b-f18cabee8e9a.png)
 
-Example of user data:
+
+Example of customer data:
 
 ![admin5](https://user-images.githubusercontent.com/67970877/150790659-c0007edd-f44e-4a77-884d-cd37dfd43314.PNG)
 ![image](https://user-images.githubusercontent.com/67970877/150793832-453630d2-1d23-4efe-a59f-3e9d04bb1909.png)
