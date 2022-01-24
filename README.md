@@ -12,10 +12,11 @@ registration, the user will be sent to a webpage where they can check their posi
 The user will also be notified through SMS and email when its their turn.
 
 # Dynamic queue allocation
-This algorithm works whenever the 'next customer' button is clicked by any employee which rearranges the queue accordingly. 
+This algorithm works whenever the 'next customer' button is clicked by any employee which rearranges the queue accordingly. It finds the largest and smallest queue and transfers some people from the largest to the smallest queue if the new position of the person would be better than before. For example, if smallest queue has 3 people in it, the algorithm will find the largest queue, say queue of length 7. The person at position (3 + 2) of largest queue will be transferred to last position (3 + 1) of smallest queue and so on. It will work till the condition is satisfied i.e. ```length of largest queue > length of smallest queue + 1```.
+
 Consider there are 2 counters, one counter attended people faster than the other. Now, 1st counter has 2 people and 2nd counter has 6 people in it.
 Hence, we can transfer 2 people from 2nd counter to 1st counter to balance it out. But the question is which 2 out of those 6 people.
-If we take the last 2, it would be easier to implement but unfair to the ones who came before them. 
+If we take the last 2, it would be easier to implement but unfair to the people who came before them. 
 
 So, the algorithm will work in the following way:
 
@@ -133,3 +134,5 @@ Example of customer data:
 ![image](https://user-images.githubusercontent.com/67970877/150793832-453630d2-1d23-4efe-a59f-3e9d04bb1909.png)
 
 P.S.: Admin has a lot of other permissions too but it is advised not to use them to avoid any errors in QMS. For eg, deleting a customer's data, changing employee's counter number, etc.
+
+Note: You need to input secret key in the settings.py file.
