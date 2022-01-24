@@ -16,16 +16,13 @@ The software is able to perform the following operations:
 1. Register user: The software is able to register user by asking their name, phone number
 and email address. The user will receive an OTP on their phone via SMS and email.
 OTP can minimize the risk of fraudulent login attempts. Only one phone number can be registered at a time. 
-
-Note: Twilio API is used to send SMS and smtplib module is used to send emails. I have left the variables for both as a blank string at top in views.py file. You need to fill those details if you want to use them. I have also commented the codes in the same file at lines 90-104, 142-156, 290-304. If you want to use the SMS or email privileges, you need to fill details at line 10-19 and uncomment those lines. You might also need to lower the security of your email account for it to work. Compiling twilio and smtplib codes in a seperate file is suggested before moving on to views.py file.
+This page can be accessed at http://127.0.0.1:8000/ if you localhost it. Twilio API is used to send SMS and smtplib module is used to send emails. I have left the variables for both as a blank string at top in views.py file. You need to fill those details if you want to use them. I have also commented the codes in the same file at lines 90-104, 142-156, 290-304. If you want to use the SMS or email privileges, you need to fill details at line 10-19 and uncomment those lines. You might also need to lower the security of your email account for it to work. Compiling twilio and smtplib codes in a seperate file is suggested before moving on to views.py file.
 
 2. Provide token number: It provides the customer with a unique token number that distinguishes
 one record from all others. The token number starts with one and increments by one. It will start with one again if the system is restarted.
 
 3. Assign counter: It can assign user a counter with the smallest queue,
-given there are more than one counter present at the location.
-
-Note: The assigned counter number might change later as the queue is dynamic. More explaination in the #employee side.
+given there are more than one counter present at the location. The assigned counter number might change later as the queue is dynamic. More explaination in the #employee side.
 
 4. Check queue status: The software provides a way for user to check their assigned counter number and position in queue.
 
@@ -54,15 +51,29 @@ SMS (using Twilio)
 Email (using smtplib)
 ![email](https://user-images.githubusercontent.com/67970877/150690637-2958e310-cf39-4c65-aaf5-0cfe07c8f316.PNG)
 
+P.S.: Frontend for customer side isn't done by me.
 
 # Employee side
-1. Login: The employees can login using their username and password.
+1. Login: The employees can login using their username and password. The customer can only register if there is atleast one employee logged in.
 
-2. Select counter: The software allows the employees to select a counter that is free. An employee can only have one unique counter at a time.
+2. Select counter: The software allows the employees to select a counter that is free. An employee can only have one unique counter at a time. The employee can also change counters and the counters will be reassigned to the customers who were assigned to previous counter.
 
 3. Customer control: The employees can call-in the customer in the first position of queue to their counter. 
 
-4. Logout: Employees can logout and leave anytime they want.
+4. Logout: Employees can logout and leave anytime they want. If an employee logs out and the queue assigned to his counter isn't empty, the counters will be reassigned to the people of that queue in ascending order. If all the employees logged out, all the user (customer) data will be deleted (if any).
+
+Screenshots
+Login page: This website can be accessed by using '/login' after the link i.e. http://127.0.0.1:8000/login for localhost. The username and password can be set by admin.
+
+![login](https://user-images.githubusercontent.com/67970877/150784909-f531f2a4-76d6-41c5-8422-f605cfa44aaa.PNG)
+
+Select counter page: 
+![select counter](https://user-images.githubusercontent.com/67970877/150784960-42ef6272-aeda-43ed-9036-d1791b43f0f7.PNG)
+
+Employee page:
+![employee 1](https://user-images.githubusercontent.com/67970877/150784983-b89fc2ae-7d80-40a6-a6bc-8aeb4070f807.PNG)
+![employee 2](https://user-images.githubusercontent.com/67970877/150784994-da7c4b31-17b5-4c47-b35b-c166721f474c.PNG)
+
 
 # Manager/Admin side
 1. Login: The admin can login using username and password.
