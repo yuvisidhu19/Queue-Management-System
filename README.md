@@ -4,11 +4,10 @@ stores, fast food restaurants and other institutions where long queues are prese
 Instead of standing in long queues, the software attempts to provide a way by which
 the customer can book their place in the queue and can estimate the expected
 duration of his turn while being in a comfortable place. This project is built as a
-website. The user can use their mobile phone to scan a QR code or write the website
-manually and be redirected to a webpage which will be used to register the user into
+website. The user can use their mobile phone to scan a QR code and be redirected to a webpage which will be used to register the user into
 the queue and provide them with a token number. A confirmation of their registration will also
 be sent to their mobile number as SMS and their email address. Following
-registration, the user will be sent to a webpage where they can check their position and counter number from token number. 
+registration, the user will be sent to a webpage where they can check their position and counter number using token number. 
 The user will also be notified through SMS and email when its their turn.
 
 # Dynamic queue allocation
