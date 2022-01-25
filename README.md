@@ -3,7 +3,7 @@ This project is aimed to optimize the current queue system being used in retail
 stores, fast food restaurants and other institutions where long queues are present.
 Instead of standing in long queues, the software attempts to provide a way by which
 the customer can book their place in the queue and can estimate the expected
-duration of his turn while being in a comfortable place. The project is built as a
+duration of his turn while being in a comfortable place. This project is built as a
 website. The user can use their mobile phone to scan a QR code or write the website
 manually and be redirected to a webpage which will be used to register the user into
 the queue and provide them with a token number. A confirmation of their registration will also
