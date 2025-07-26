@@ -9,6 +9,7 @@ the queue and provide them with a token number. A confirmation of their registra
 be sent to their mobile number as SMS and their email address. Following
 registration, the user will be sent to a webpage where they can check their position and counter number using token number. 
 The user will also be notified through SMS and email when its their turn.
+
 Medium Article: https://medium.com/p/32a1d9bc14e2
 
 # Dynamic queue allocation
